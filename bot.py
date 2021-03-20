@@ -63,7 +63,7 @@ eps = sorted([ep for ep in wd.glob('**/*') if re.match(filetypes, str(ep))])
 # TODO: sanitize this input
 ep_num = input("Episode: ")
 
-player = mpv.MPV(input_default_bindings=True, input_vo_keyboard=True, ytdl=True)
+player = mpv.MPV(input_default_bindings=True, input_vo_keyboard=True, osc=True, ytdl=True)
 player.title = '${media-title} - Bot by Laevos'
 player.playlist_start = int(ep_num) - 1
 
