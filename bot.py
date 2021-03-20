@@ -55,9 +55,7 @@ while choice is None:
 
 print(f"Selected: {choice}")
 # set up working directory and make a list the available video files
-eps = []
 wd = P(f"{source_dir}/{choice}")
-
 eps = sorted([ep for ep in wd.glob('**/*') if re.match(filetypes, str(ep))])
 
 # Create an mpv player instance and play the directory starting from the episode specified
